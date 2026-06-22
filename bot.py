@@ -256,8 +256,9 @@ async def main():
     save_seen(seen)
 
     if not new_jobs:
-        print("No new Amazon warehouse jobs found.")
-        return
+    send_message("✅ Amazon Job Bot checked successfully. No new warehouse jobs found right now.")
+    print("No new Amazon warehouse jobs found.")
+    return
 
     for job in new_jobs[:10]:
         message = (
