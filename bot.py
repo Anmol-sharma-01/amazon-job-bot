@@ -1,100 +1,77 @@
 import os
-import json
 import requests
-from bs4 import BeautifulSoup
 
 BOT_TOKEN = os.environ["BOT_TOKEN"]
 CHAT_ID = os.environ["CHAT_ID"]
 
-SEEN_FILE = "seen_jobs.json"
-
-LOCATIONS = [
-    "Kitchener", "Waterloo", "Cambridge",
-    "Mississauga", "Hamilton", "Toronto",
-    "Brampton", "Milton", "Vaughan",
-    "Burlington", "Oakville", "Etobicoke", "Scarborough"
+AMAZON_LINKS = [
+    {
+        "name": "Amazon Canada jobs app",
+        "url": "https://hiring.amazon.ca/app"
+    },
+    {
+        "name": "Warehouse jobs page",
+        "url": "https://hiring.amazon.ca/job-opportunities/warehouse-jobs"
+    },
+    {
+        "name": "Fulfillment Centre Associate",
+        "url": "https://hiring.amazon.ca/job-opportunities/fulfillment-centre-associate"
+    },
+    {
+        "name": "Sort Centre Associate",
+        "url": "https://hiring.amazon.ca/job-opportunities/sortation-centre-associate"
+    },
+    {
+        "name": "Kitchener Delivery Station Warehouse Associate",
+        "url": "https://hiring.amazon.ca/jobDetail/en-CA/Amazon-Delivery-Station-Warehouse-Associate/Kitchener/a0R4U00000MZ3jhUAD"
+    },
+    {
+        "name": "Hamilton Fulfilment Centre Warehouse Associate",
+        "url": "https://hiring.amazon.ca/jobDetail/en-CA/Amazon-Fulfilment-Centre-Warehouse-Associate/Hamilton/a0R4U00000MZ3jXUAT"
+    },
+    {
+        "name": "Mississauga Fulfilment Centre Warehouse Associate",
+        "url": "https://hiring.amazon.ca/jobDetail/en-CA/Amazon-Fulfilment-Centre-Warehouse-Associate/Mississauga/a0R4U00000NXzbyUAD"
+    }
 ]
-
-KEYWORDS = [
-    "warehouse",
-    "fulfilment",
-    "fulfillment",
-    "delivery station",
-    "sortation",
-    "sort centre",
-    "associate"
-]
-
-def load_seen_jobs():
-    if not os.path.exists(SEEN_FILE):
-        return set()
-    with open(SEEN_FILE, "r") as f:
-        return set(json.load(f))
-
-def save_seen_jobs(seen):
-    with open(SEEN_FILE, "w") as f:
-        json.dump(list(seen), f, indent=2)
 
 def send_message(text):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
-    requests.post(url, data={"chat_id": CHAT_ID, "text": text})
+    response = requests.post(url, data={
+        "chat_id": CHAT_ID,
+        "text": text
+    })
+    print(response.status_code, response.text)
 
-def find_jobs_for_city(city):
-    search_url = f"https://hiring.amazon.ca/search?query=warehouse&location={city}%2C%20ON"
-    response = requests.get(search_url, headers={"User-Agent": "Mozilla/5.0"}, timeout=20)
+def check_link(job):
+    try:
+        response = requests.get(
+            job["url"],
+            headers={"User-Agent": "Mozilla/5.0"},
+            timeout=20
+        )
 
-    soup = BeautifulSoup(response.text, "html.parser")
-    jobs = []
+        if response.status_code == 200:
+            text = response.text.lower()
 
-    for link in soup.find_all("a", href=True):
-        title = link.get_text(" ", strip=True)
-        href = link["href"]
+            if "apply" in text or "warehouse" in text or "amazon" in text:
+                message = (
+                    "🔔 Amazon job page is available\n\n"
+                    f"{job['name']}\n"
+                    f"{job['url']}\n\n"
+                    "Check quickly and apply if shifts are open."
+                )
+                send_message(message)
 
-        if not title:
-            continue
+        else:
+            print(f"Not available: {job['name']} - {response.status_code}")
 
-        title_lower = title.lower()
-
-        if any(keyword in title_lower for keyword in KEYWORDS):
-            job_url = href if href.startswith("http") else "https://hiring.amazon.ca" + href
-
-            jobs.append({
-                "title": title,
-                "city": city,
-                "url": job_url
-            })
-
-    return jobs
+    except Exception as e:
+        print(f"Error checking {job['name']}: {e}")
 
 def main():
-    seen = load_seen_jobs()
-    new_jobs_found = 0
-
-    for city in LOCATIONS:
-        try:
-            jobs = find_jobs_for_city(city)
-
-            for job in jobs:
-                job_id = job["url"]
-
-                if job_id not in seen:
-                    seen.add(job_id)
-                    new_jobs_found += 1
-
-                    message = (
-                        "🚨 New Amazon warehouse job found!\n\n"
-                        f"Title: {job['title']}\n"
-                        f"Location: {job['city']}, ON\n\n"
-                        f"Apply here:\n{job['url']}"
-                    )
-
-                    send_message(message)
-
-        except Exception as e:
-            print(f"Error checking {city}: {e}")
-
-    save_seen_jobs(seen)
-    print(f"New jobs found: {new_jobs_found}")
+    for job in AMAZON_LINKS:
+        check_link(job)
 
 if __name__ == "__main__":
     main()
