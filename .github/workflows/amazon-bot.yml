@@ -5,6 +5,9 @@ on:
     - cron: "*/15 * * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   run-bot:
     runs-on: ubuntu-latest
@@ -18,9 +21,15 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - run: python -m playwright install chromium --with-deps
-
       - run: python bot.py
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
+
+      - name: Save seen jobs
+        run: |
+          git config user.name "amazon-job-bot"
+          git config user.email "bot@example.com"
+          git add seen_jobs.json
+          git diff --cached --quiet || git commit -m "Update seen jobs"
+          git push
