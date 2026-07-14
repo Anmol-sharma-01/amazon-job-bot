@@ -1,4 +1,65 @@
 {
-  "seen": {},
-  "last_daily_status": ""
+  "last_daily_status": "",
+  "seen": {
+    "56252e96ba9892a94d68098f": {
+      "company": "Arctic Wolf",
+      "first_seen": "2026-07-14T19:50:17.812179+00:00",
+      "title": "Cybersecurity Consultant / Concierge Security Engineer 2",
+      "url": "https://arcticwolf.wd1.myworkdayjobs.com/en-US/External/job/Newcastle-GBR/Cybersecurity-Consultant---Concierge-Security-Engineer-2--m-f-d-_R25_1024"
+    },
+    "69253505399e9aadef0be643": {
+      "company": "Amazon",
+      "first_seen": "2026-07-14T19:50:17.812179+00:00",
+      "title": "IT Support Eng I (ONS)",
+      "url": "https://www.amazon.jobs/en/jobs/10432442/it-support-eng-i-ons"
+    },
+    "70c96f4aa7ea0d224d24c56b": {
+      "company": "Arctic Wolf",
+      "first_seen": "2026-07-14T19:50:17.812179+00:00",
+      "title": "Cyber Security Consultant (m/w/d) \u2013 Security Advisor | 100% Remote in Deutschland",
+      "url": "https://arcticwolf.wd1.myworkdayjobs.com/en-US/External/job/Remote-Germany/Cyber-Security-Consultant--m-w-d----Security-Advisor---100--Remote-in-Deutschland_R26_778"
+    },
+    "76184baba384d08e484afaa1": {
+      "company": "Amazon",
+      "first_seen": "2026-07-14T19:50:17.812179+00:00",
+      "title": "...Read more",
+      "url": "https://www.amazon.jobs/en/jobs/10432442/it-support-eng-i-ons"
+    },
+    "77b05e9359d3073e5b85ef59": {
+      "company": "Arctic Wolf",
+      "first_seen": "2026-07-14T19:50:17.812179+00:00",
+      "title": "Sales Operations Administrator-IN",
+      "url": "https://arcticwolf.wd1.myworkdayjobs.com/en-US/External/job/Remote---IND---Karnataka/Sales-Operations-Administrator-IN_R26_656-1"
+    },
+    "90b15676a040c98c5c67a722": {
+      "company": "Amazon",
+      "first_seen": "2026-07-14T19:50:17.812179+00:00",
+      "title": "...Read more",
+      "url": "https://www.amazon.jobs/en/jobs/10407710/it-support-eng-i-ons"
+    },
+    "957b67f93acdacfffb6484d9": {
+      "company": "Amazon",
+      "first_seen": "2026-07-14T19:50:17.812179+00:00",
+      "title": "IT Support Eng I (ONS)",
+      "url": "https://www.amazon.jobs/en/jobs/10407710/it-support-eng-i-ons"
+    },
+    "a296613ecb45d3a4b6bff7d4": {
+      "company": "BlackBerry",
+      "first_seen": "2026-07-14T19:50:17.812179+00:00",
+      "title": "Technical Support Specialist",
+      "url": "https://bb.wd3.myworkdayjobs.com/en-US/BlackBerry/job/Dusseldorf-Germany/Senior-Technical-Support-Specialist---Onsite_20250308-1"
+    },
+    "c4f15e7e729916acedb8280c": {
+      "company": "BlackBerry",
+      "first_seen": "2026-07-14T19:50:17.812179+00:00",
+      "title": "IT Support Student",
+      "url": "https://bb.wd3.myworkdayjobs.com/en-US/BlackBerry/job/Dusseldorf-Germany/IT-Support-Student_20260204-1"
+    },
+    "f185f34a2f474f87f342cb56": {
+      "company": "Arctic Wolf",
+      "first_seen": "2026-07-14T19:50:17.812179+00:00",
+      "title": "Berater f\u00fcr Cybersecurity (m/w/d)",
+      "url": "https://arcticwolf.wd1.myworkdayjobs.com/en-US/External/job/Frankfurt-DEU/Berater-fr-Cybersecurity--m-w-d-_R26_681"
+    }
+  }
 }
