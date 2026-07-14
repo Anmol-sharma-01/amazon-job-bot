@@ -1,0 +1,60 @@
+name: Logistics Job Alerts
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: logistics-job-alerts
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python packages
+        run: pip install -r requirements.txt
+
+      - name: Install Chromium
+        run: python -m playwright install chromium --with-deps
+
+      - name: Scan official logistics career pages
+        run: python job_bot.py
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+          SCAN_GROUP: logistics
+          RUN_REASON: ${{ github.event_name }}
+
+      - name: Save logistics state
+        if: always()
+        run: |
+          git config user.name "job-alert-bot"
+          git config user.email "job-alert-bot@users.noreply.github.com"
+          git add state_logistics.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update logistics job state"
+            git pull --rebase
+            git push
+          fi
+
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: logistics-debug
+          path: debug_logistics.json
+          retention-days: 3
+          if-no-files-found: ignore
