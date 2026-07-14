@@ -1,0 +1,257 @@
+[
+  {
+    "name": "Amazon Hourly - GTA",
+    "company": "Amazon",
+    "group": "logistics",
+    "url": "https://hiring.amazon.ca/locations/toronto-jobs",
+    "categories": [
+      "warehouse",
+      "driver"
+    ],
+    "regional_page": true,
+    "region_name": "Greater Toronto Area",
+    "max_pages": 1,
+    "wait_ms": 5000
+  },
+  {
+    "name": "Amazon Hourly - Southwest Ontario",
+    "company": "Amazon",
+    "group": "logistics",
+    "url": "https://hiring.amazon.ca/locations/southwest-ontario-jobs",
+    "categories": [
+      "warehouse",
+      "driver"
+    ],
+    "regional_page": true,
+    "region_name": "Southwest Ontario",
+    "max_pages": 1,
+    "wait_ms": 5000
+  },
+  {
+    "name": "Amazon Hourly - Warehouse",
+    "company": "Amazon",
+    "group": "logistics",
+    "url": "https://hiring.amazon.ca/job-opportunities/warehouse-jobs",
+    "categories": [
+      "warehouse",
+      "driver"
+    ],
+    "regional_page": false,
+    "max_pages": 1,
+    "wait_ms": 5000
+  },
+  {
+    "name": "UPS Canada - Search",
+    "company": "UPS",
+    "group": "logistics",
+    "url": "https://www.jobs-ups.com/ca/en/search-results",
+    "categories": [
+      "warehouse",
+      "driver"
+    ],
+    "regional_page": false,
+    "max_pages": 3,
+    "wait_ms": 5000
+  },
+  {
+    "name": "UPS Canada - Warehouse",
+    "company": "UPS",
+    "group": "logistics",
+    "url": "https://www.jobs-ups.com/ca/en/warehouse-workers",
+    "categories": [
+      "warehouse"
+    ],
+    "regional_page": false,
+    "max_pages": 1,
+    "wait_ms": 4000
+  },
+  {
+    "name": "UPS Canada - Drivers",
+    "company": "UPS",
+    "group": "logistics",
+    "url": "https://www.jobs-ups.com/ca/en/package-delivery-driver",
+    "categories": [
+      "driver"
+    ],
+    "regional_page": false,
+    "max_pages": 1,
+    "wait_ms": 4000
+  },
+  {
+    "name": "FedEx Canada Operations",
+    "company": "FedEx",
+    "group": "logistics",
+    "url": "https://careers.fedex.com/international/us-and-canada-operations/jobs?filter%5Bcountry%5D%5B0%5D=Canada",
+    "categories": [
+      "warehouse",
+      "driver"
+    ],
+    "regional_page": false,
+    "max_pages": 4,
+    "wait_ms": 5000
+  },
+  {
+    "name": "FedEx Package Handler Jobs",
+    "company": "FedEx",
+    "group": "logistics",
+    "url": "https://careers.fedex.com/career-areas/package-handler/jobs",
+    "categories": [
+      "warehouse"
+    ],
+    "regional_page": false,
+    "max_pages": 4,
+    "wait_ms": 5000
+  },
+  {
+    "name": "FedEx Driver Jobs",
+    "company": "FedEx",
+    "group": "logistics",
+    "url": "https://careers.fedex.com/career-areas/driver/jobs",
+    "categories": [
+      "driver"
+    ],
+    "regional_page": false,
+    "max_pages": 4,
+    "wait_ms": 5000
+  },
+  {
+    "name": "Purolator - Drivers and Warehouse",
+    "company": "Purolator",
+    "group": "logistics",
+    "url": "https://careers.purolator.com/go/Drivers-%26-Warehouse/9272400/",
+    "categories": [
+      "warehouse",
+      "driver"
+    ],
+    "regional_page": false,
+    "max_pages": 3,
+    "wait_ms": 4000
+  },
+  {
+    "name": "Purolator - Driving",
+    "company": "Purolator",
+    "group": "logistics",
+    "url": "https://careers.purolator.com/go/Driving-Jobs/8997800/",
+    "categories": [
+      "driver"
+    ],
+    "regional_page": false,
+    "max_pages": 3,
+    "wait_ms": 4000
+  },
+  {
+    "name": "Purolator - Frontline Operations",
+    "company": "Purolator",
+    "group": "logistics",
+    "url": "https://careers.purolator.com/go/Frontline-Operations-jobs/1107600/",
+    "categories": [
+      "warehouse",
+      "driver"
+    ],
+    "regional_page": false,
+    "max_pages": 3,
+    "wait_ms": 4000
+  },
+  {
+    "name": "Amazon Jobs - Ontario IT Support",
+    "company": "Amazon",
+    "group": "tech",
+    "url": "https://www.amazon.jobs/en/search?base_query=IT%20Support&loc_query=Ontario%2C%20Canada",
+    "categories": [
+      "it_support"
+    ],
+    "regional_page": false,
+    "max_pages": 3,
+    "wait_ms": 5000
+  },
+  {
+    "name": "Amazon Jobs - Ontario Security",
+    "company": "Amazon",
+    "group": "tech",
+    "url": "https://www.amazon.jobs/en/search?base_query=Security%20Analyst&loc_query=Ontario%2C%20Canada",
+    "categories": [
+      "cyber"
+    ],
+    "regional_page": false,
+    "max_pages": 3,
+    "wait_ms": 5000
+  },
+  {
+    "name": "FedEx Professional Jobs",
+    "company": "FedEx",
+    "group": "tech",
+    "url": "https://careers.fedex.com/career-areas/professional/jobs",
+    "categories": [
+      "it_support",
+      "cyber"
+    ],
+    "regional_page": false,
+    "max_pages": 4,
+    "wait_ms": 5000
+  },
+  {
+    "name": "Purolator Information Technology",
+    "company": "Purolator",
+    "group": "tech",
+    "url": "https://careers.purolator.com/go/Information-Technology/9272300/",
+    "categories": [
+      "it_support",
+      "cyber"
+    ],
+    "regional_page": false,
+    "max_pages": 2,
+    "wait_ms": 4000
+  },
+  {
+    "name": "BlackBerry Careers",
+    "company": "BlackBerry",
+    "group": "tech",
+    "url": "https://bb.wd3.myworkdayjobs.com/BlackBerry",
+    "categories": [
+      "it_support",
+      "cyber"
+    ],
+    "regional_page": false,
+    "max_pages": 4,
+    "wait_ms": 7000
+  },
+  {
+    "name": "Arctic Wolf Careers",
+    "company": "Arctic Wolf",
+    "group": "tech",
+    "url": "https://arcticwolf.wd1.myworkdayjobs.com/External",
+    "categories": [
+      "it_support",
+      "cyber"
+    ],
+    "regional_page": false,
+    "max_pages": 4,
+    "wait_ms": 7000
+  },
+  {
+    "name": "OpenText Careers",
+    "company": "OpenText",
+    "group": "tech",
+    "url": "https://careers.opentext.com/",
+    "categories": [
+      "it_support",
+      "cyber"
+    ],
+    "regional_page": false,
+    "max_pages": 4,
+    "wait_ms": 5000
+  },
+  {
+    "name": "eSentire Careers",
+    "company": "eSentire",
+    "group": "tech",
+    "url": "https://www.esentire.com/company/careers",
+    "categories": [
+      "it_support",
+      "cyber"
+    ],
+    "regional_page": false,
+    "max_pages": 2,
+    "wait_ms": 5000
+  }
+]
