@@ -1,6 +1,12 @@
 {
   "last_daily_status": "2026-08-20",
   "seen": {
+    "27aaab74b1194d9fa2854c37": {
+      "company": "Amazon",
+      "first_seen": "2026-08-20T20:49:29.112817+00:00",
+      "title": "IT Support Associate , OTS",
+      "url": "https://www.amazon.jobs/en/jobs/10499495/it-support-associate-ots"
+    },
     "56252e96ba9892a94d68098f": {
       "company": "Arctic Wolf",
       "first_seen": "2026-07-14T19:50:17.812179+00:00",
@@ -60,6 +66,12 @@
       "first_seen": "2026-07-14T19:50:17.812179+00:00",
       "title": "Berater f\u00fcr Cybersecurity (m/w/d)",
       "url": "https://arcticwolf.wd1.myworkdayjobs.com/en-US/External/job/Frankfurt-DEU/Berater-fr-Cybersecurity--m-w-d-_R26_681"
+    },
+    "f699f6b9755e205791554a2b": {
+      "company": "Amazon",
+      "first_seen": "2026-08-20T20:49:29.112817+00:00",
+      "title": "...Read more",
+      "url": "https://www.amazon.jobs/en/jobs/10499495/it-support-associate-ots"
     }
   }
 }
